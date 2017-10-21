@@ -23,9 +23,10 @@ class Cat implements Animal{
 }
 
 class Bird implements Animal{
-    name:string;
+    name:string; 
     age:number;
     height:number;
+    address:string;
     constructor(name:string, age:number){
         this.name = name;
         this.age = age;
