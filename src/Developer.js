@@ -10,9 +10,13 @@ var __extends = (this && this.__extends) || (function () {
 })();
 var Worker2 = /** @class */ (function () {
     function Worker2() {
+        this.name = "홍길동";
     }
+    // constructor(name:string){
+    //     this.name = name;
+    // }
     Worker2.prototype.goForWork = function () {
-        console.log("출근 중");
+        console.log(this.name + "출근 중");
     };
     Worker2.prototype.doWorking = function () {
         console.log("일 중");
@@ -28,7 +32,7 @@ var Developer = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Developer.prototype.doWorking = function () {
-        console.log("개발 중");
+        console.log(this.name + "개발 중");
     };
     return Developer;
 }(Worker2));

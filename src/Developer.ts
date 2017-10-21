@@ -1,4 +1,3 @@
-
 interface Work{
     goForWork():void;
     doWorking():void;
@@ -6,8 +5,12 @@ interface Work{
 }
 
 class Worker2 implements Work{
+    protected name:string = "홍길동";
+    // constructor(name:string){
+    //     this.name = name;
+    // }
     goForWork():void{
-        console.log("출근 중");
+        console.log(this.name + "출근 중");
     }
     doWorking():void{
         console.log("일 중");
@@ -18,7 +21,7 @@ class Worker2 implements Work{
 }
 class Developer extends Worker2{
     doWorking():void{
-        console.log("개발 중");
+        console.log(this.name + "개발 중");
     }
 }
 class Corder extends Worker2{
@@ -36,5 +39,4 @@ let dev:Work = new Developer();
 doTest(dev);
 let cod:Work = new Corder();
 doTest(cod);
-
 
