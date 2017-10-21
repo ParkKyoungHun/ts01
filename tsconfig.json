@@ -4,4 +4,7 @@
       "module": "commonjs",
       "sourceMap": true
     }
+    ,"include": [
+      "src/**/*"
+    ]
 }
