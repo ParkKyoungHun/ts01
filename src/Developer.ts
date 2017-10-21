@@ -5,20 +5,36 @@ interface Work{
     goOut():void;
 }
 
-class Developer implements Work{
+class Worker2 implements Work{
     goForWork():void{
-        console.log("일하러 가자");
+        console.log("출근 중");
     }
     doWorking():void{
-        console.log("일하러 가자");
+        console.log("일 중");
     }
     goOut():void{
-        console.log("일하러 가자");
+        console.log("퇴근 중");
     }
-
+}
+class Developer extends Worker2{
+    doWorking():void{
+        console.log("개발 중");
+    }
+}
+class Corder extends Worker2{
+    doWorking():void{
+        console.log("코딩 중");
+    }
 }
 
-let dev:Developer = new Developer();
-dev.doWorking();
-dev.goForWork();
-dev.goOut();
+function doTest(w:Work){
+    w.goForWork();
+    w.doWorking();
+    w.goOut();
+}
+let dev:Work = new Developer();
+doTest(dev);
+let cod:Work = new Corder();
+doTest(cod);
+
+
