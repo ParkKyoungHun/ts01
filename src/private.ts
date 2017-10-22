@@ -26,7 +26,7 @@ function doTest(user:UserDTO,i:number):UserDTO{
 function doTest1(user:UserDTO):UserDTO{
     user = null;
     return user;
-}
+} 
 let hong:UserDTO = new UserDTO();
 doTest(hong,20);
 console.log(hong.getName());
