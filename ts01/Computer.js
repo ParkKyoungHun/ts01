@@ -26,4 +26,20 @@ class EE {
     }
 }
 let ee = new EE();
+let str1 = "str";
+let str2 = "str";
+let str3 = new String("str");
+let str4 = new String("str");
+String.prototype.equals = function (str) {
+    if (typeof str == "object") {
+        return str.toString() == this.toString();
+    }
+};
+console.log("str1==str2 : " + (str1 == str2));
+console.log("str1==str3 : " + (str1 == str3));
+console.log("str3==str41 : " + (str3 == str4));
+console.log("str1===str2 : " + (str1 === str2));
+console.log("str1===str3 : " + (str1 === str3));
+console.log("str3===str41 : " + (str3 === str4));
+console.log("str3 equals str4 : " + (str3.equals(str4)));
 //# sourceMappingURL=Computer.js.map

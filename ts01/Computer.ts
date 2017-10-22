@@ -25,3 +25,23 @@ class EE{
     name:string = "nam";
 }
 let ee:EE = new EE();
+
+
+
+let str1 : string = "str";
+let str2 : string = "str";
+let str3 : String = new String("str");
+let str4 : String = new String("str");
+
+String.prototype.equals = function(str){
+    if(typeof str=="object"){
+        return str.toString()==this.toString();
+    }
+}
+console.log("str1==str2 : " + (str1==str2));
+console.log("str1==str3 : " + (str1==str3));
+console.log("str3==str41 : " + (str3==str4));
+console.log("str1===str2 : " + (str1===str2));
+console.log("str1===str3 : " + (str1===str3));
+console.log("str3===str41 : " + (str3===str4));
+console.log("str3 equals str4 : " + (str3.equals(str4));

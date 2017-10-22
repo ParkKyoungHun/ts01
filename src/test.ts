@@ -92,7 +92,8 @@ mn = lot1;
 console.log("test");
 let test:Set<string> = new Set<string>();
 test.add("1");
-test.add("1");
+test.add("2");
+test.add("3");
 
 for(let i in test){
     console.log(i);
