@@ -17,7 +17,7 @@ class UserDTO{
     }
 }
 
-function doTest(user:UserDTO,i:number):UserDTO{
+function doTest4(user:UserDTO,i:number):UserDTO{
     user.setName(i+"홍길동");
     user.setAddress(i+"서울");
     return user;
@@ -28,12 +28,16 @@ function doTest1(user:UserDTO):UserDTO{
     return user;
 } 
 let hong:UserDTO = new UserDTO();
-doTest(hong,20);
+doTest4(hong,120);
 console.log(hong.getName());
 console.log(hong.getAddress());
-// doTest1(hong);
-// console.log(hong.getName());
-// console.log(hong.getAddress());
+
+doTest1(hong);
+console.log(hong.getName());
+console.log(hong.getAddress());
+
+
+
 
 
 

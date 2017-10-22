@@ -15,7 +15,7 @@ var UserDTO = /** @class */ (function () {
     };
     return UserDTO;
 }());
-function doTest(user, i) {
+function doTest4(user, i) {
     user.setName(i + "홍길동");
     user.setAddress(i + "서울");
     return user;
@@ -25,10 +25,10 @@ function doTest1(user) {
     return user;
 }
 var hong = new UserDTO();
-doTest(hong, 20);
+doTest4(hong, 120);
 console.log(hong.getName());
 console.log(hong.getAddress());
-// doTest1(hong);
-// console.log(hong.getName());
-// console.log(hong.getAddress());
+doTest1(hong);
+console.log(hong.getName());
+console.log(hong.getAddress());
 //# sourceMappingURL=private.js.map
