@@ -1,20 +1,17 @@
-var UserDTO = /** @class */ (function () {
-    function UserDTO() {
-    }
-    UserDTO.prototype.setName = function (name) {
+class UserDTO {
+    setName(name) {
         this.name = name;
-    };
-    UserDTO.prototype.getName = function () {
+    }
+    getName() {
         return this.name;
-    };
-    UserDTO.prototype.setAddress = function (address) {
+    }
+    setAddress(address) {
         this.address = address;
-    };
-    UserDTO.prototype.getAddress = function () {
+    }
+    getAddress() {
         return this.address;
-    };
-    return UserDTO;
-}());
+    }
+}
 function doTest4(user, i) {
     user.setName(i + "홍길동");
     user.setAddress(i + "서울");
@@ -24,7 +21,7 @@ function doTest1(user) {
     user = null;
     return user;
 }
-var hong = new UserDTO();
+let hong = new UserDTO();
 doTest4(hong, 120);
 console.log(hong.getName());
 console.log(hong.getAddress());
